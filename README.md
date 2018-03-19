@@ -103,6 +103,10 @@ When done testing / exploring, delete the chat1 app via helm.
 
 `helm delete chat1 --purge`
 
+Remove the LoadBalancer.
+
+`kubectl delete service/chat-service`
+
 Check to make sure the persistent volumes get cleaned up. You may need to check a few times. It takes about a minute for everything to clean up.
 
 `kubectl get pv`
