@@ -16,7 +16,7 @@ This has been tested on MacOS High Sierra 10.13.2, kubectl 1.8, Google Kubernete
 
 ## Install Rocket.Chat 
 
-1. Install helm with the correct RBAC settings:
+Install helm with the correct RBAC settings:
 
 ```bash
 kubectl create serviceaccount tiller --namespace kube-system
@@ -25,7 +25,7 @@ curl -sSL https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get |
 helm init --service-account tiller
 ```
 
-1. Create the config file for Rocket.Chat helm chart. Note that there are more options and we are only modifying sections related to persistent storage.
+Create the config file for Rocket.Chat helm chart. Note that there are more options and we are only modifying sections related to persistent storage.
 
 ```bash
 cat << EOF > rocketchat_options.yaml
@@ -55,11 +55,11 @@ List kubernetes services. Services are the frontend to pods. You will note that 
 
 `kubectl get svc`
 
-Get list of deployments
+Get list of deployments.
 
 `kubectl get deployments`
 
-Expose the Rocket.Chat service to external traffic:
+Expose the Rocket.Chat service to external traffic.
 
 `kubectl expose deployment chat1-rocketchat --type=LoadBalancer --name=chat-service`
 
@@ -79,7 +79,7 @@ Get a list of PersistentVolumes (PVs). These PVs were created by the standard St
 
 `kubectl get pv`
 
-## Use Rocket.Chat
+## Test chat and persistence
 
 Get the external ip address and port so you can login to your newly launched Rocket.Chat app.
 
