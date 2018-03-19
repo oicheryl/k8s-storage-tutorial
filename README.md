@@ -85,7 +85,7 @@ Get the external ip address and port so you can login to your newly launched Roc
 
 `kubectl get services`
 
-Open a browser and connect to the external ip and port.
+Open a browser and connect to http://EXTERNAL-IP:PORT.
 
 Once in the chat room, type a few lines, then delete the pod that is running mongodb. A new pod will be scheduled in its place and come up with a minute or so (the container image needs to be fetched which slows the process down).
 
