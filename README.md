@@ -59,7 +59,7 @@ Get list of deployments.
 
 `kubectl get deployments`
 
-Expose the Rocket.Chat service to external traffic.
+Expose the Rocket.Chat deployment to external traffic.
 
 `kubectl expose deployment chat1-rocketchat --type=LoadBalancer --name=chat1-service`
 
