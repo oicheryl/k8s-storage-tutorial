@@ -8,7 +8,7 @@ This tutorial runs through
 
 ## Prerequisites
 
-`kubectl` installed and configured to access a two node Kubernetes 1.9 cluster. Run `kubectl get nodes` to check.
+`kubectl` installed and configured to access a two node Kubernetes 1.8 cluster. Run `kubectl get nodes` to check.
 
 ## Tested
 
