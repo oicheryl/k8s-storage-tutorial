@@ -61,7 +61,7 @@ Get list of deployments.
 
 Expose the Rocket.Chat service to external traffic.
 
-`kubectl expose deployment chat1-rocketchat --type=LoadBalancer --name=chat-service`
+`kubectl expose deployment chat1-rocketchat --type=LoadBalancer --name=chat1-service`
 
 Get list of pods. You should see 2 pods for rocketchat, one that runs the mongodb backend database and another for the rocketchat app.
 
@@ -105,7 +105,7 @@ When done testing / exploring, delete the chat1 app via helm.
 
 Remove the LoadBalancer.
 
-`kubectl delete service/chat-service`
+`kubectl delete service/chat1-service`
 
 Check to make sure the persistent volumes get cleaned up. You may need to check a few times. It takes about a minute for everything to clean up.
 
