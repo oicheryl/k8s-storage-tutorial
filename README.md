@@ -111,5 +111,9 @@ Check to make sure the persistent volumes get cleaned up. You may need to check 
 
 `kubectl get pv`
 
-
-
+Remove Helm, role binding and secret.
+`kubectl delete clusterrolebinding/tiller`
+`kubectl delete serviceaccount tiller --namespace kube-system`
+`sudo kubectl get secrets --namespace kube-system`
+`sudo kubectl delete secret --namespace=kube-system tiller-token-td7lb`
+`sudo rm /usr/local/bin/helm`
